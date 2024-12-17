@@ -2,6 +2,7 @@ import { Card } from "./Card";
 import { FaStar } from "react-icons/fa";
 import { ratings } from "../../../utils/ratings";
 import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
 
 export const Opinions = () => {
 
@@ -25,14 +26,14 @@ export const Opinions = () => {
 
     return (
         <section className="border-2 border-red-500 flex flex-row justify-center py-5">
-            {/* <div className="container flex flex-col items-center">
+            <div className="container flex flex-col items-center">
                 <h1 className="text-white text-4xl">Users opinions</h1>
-                <div className="flex flex-row flex-wrap justify-center w-[80%] mt-14 border-2 border-blue-500">
+                <div className="flex flex-row flex-wrap justify-center w-[80%] mt-14 ">
                     {
                         ratings.map((rating, index) => {
                             return (
                                 <Card key={`k-rating${index}`}>
-                                    <img src={rating.img} alt="User Image" className="w-20 h-20 -mt-8 mb-4"/>
+                                    <img src={rating.img} alt="User Image" className="w-20 h-20 -mt-8 mb-4" />
                                     <span className="flex flex-row justify-center">
                                         <FaStar className="text-yellow-500" />
                                         <FaStar className="text-yellow-500" />
@@ -46,46 +47,46 @@ export const Opinions = () => {
                         })
                     }
                 </div>
-                <div className="flex flex-row flex-wrap justify-center w-[80%] mt-14 border-2 border-blue-500">
-                    <Carousel
-                        swipeable={false}
-                        draggable={false}
-                        showDots={true}
-                        responsive={responsive}
-                        ssr={true} // means to render carousel on server-side.
-                        infinite={true}
-                        autoPlay={false}
-                        autoPlaySpeed={1000}
-                        keyBoardControl={false}
-                        customTransition="all .5"
-                        transitionDuration={500}
-                        containerClass="carousel-container"
-                        removeArrowOnDeviceType={["tablet", "mobile"]}
-                        deviceType={'desktop'}
-                        dotListClass="custom-dot-list-style"
-                        itemClass=""
-                    >
-                        {
-                            ratings.map((rating, index) => {
-                                return (
-                                    <Card key={`k-rating${index}`}>
-                                        <img src={rating.img} alt="User Image" className="w-20 h-20 -mt-8 mb-4" />
-                                        <span className="flex flex-row justify-center">
-                                            <FaStar className="text-yellow-500" />
-                                            <FaStar className="text-yellow-500" />
-                                            <FaStar className="text-yellow-500" />
-                                            <FaStar className="text-yellow-500" />
-                                            <FaStar className="text-yellow-500" />
-                                        </span>
-                                        <p className="text-white text-md text-center mt-10">{rating.comment}</p>
-                                    </Card>
-                                )
-                            })
-                        }
-                    </Carousel>
-                </div>
-            </div> */}
-            
+                {/* <Carousel
+                    responsive={responsive}
+                    additionalTransfrom={0}
+                    arrows
+                    autoPlaySpeed={3000}
+                    centerMode={false}
+                    className=""
+                    containerClass="container"
+                    dotListClass=""
+                    draggable
+                    focusOnSelect={false}
+                    infinite={true}
+                    itemClass=""
+                    keyBoardControl
+                    minimumTouchDrag={80}
+                    pauseOnHover
+                    renderArrowsWhenDisabled={false}
+                    renderButtonGroupOutside={false}
+                    renderDotsOutside={false}
+                >
+                    {
+                        ratings.map((rating, index) => {
+                            return (
+                                <Card key={`k-rating${index}`}>
+                                    <img src={rating.img} alt="User Image" className="w-20 h-20 -mt-8 mb-4" />
+                                    <span className="flex flex-row justify-center">
+                                        <FaStar className="text-yellow-500" />
+                                        <FaStar className="text-yellow-500" />
+                                        <FaStar className="text-yellow-500" />
+                                        <FaStar className="text-yellow-500" />
+                                        <FaStar className="text-yellow-500" />
+                                    </span>
+                                    <p className="text-white text-md text-center mt-10">{rating.comment}</p>
+                                </Card>
+                            )
+                        })
+                    }
+                </Carousel> */}
+            </div>
+
         </section>
     )
 }
