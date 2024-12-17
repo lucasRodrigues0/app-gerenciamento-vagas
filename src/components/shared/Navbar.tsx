@@ -2,7 +2,7 @@ import { navbarOptions } from "../../utils/navbarOptions"
 
 export const Navbar = () => {
 
-    const role: string | null = 'candidate';
+    const role: string | null = null;
 
     return (
         <div className="w-full bg-slate-500 shadow-lg flex flex-row min-h-16 items-center justify-center">
@@ -15,7 +15,7 @@ export const Navbar = () => {
                             )
                             .map(
                                 option =>
-                                    <div className="text-white hover:text-violet-300 transition-all mx-1.5">
+                                    <div key={`k-${option.name}`} className="text-white hover:text-violet-300 transition-all mx-1.5">
                                         {option.name}
                                     </div>
                             )

@@ -8,6 +8,9 @@ export default {
     extend: {
       fontFamily: {
         sans: ['Roboto', 'sans-serif']
+      },
+      backgroundImage: {
+        'hero': "url(./src/assets/hero-background.jpg)"
       }
     },
   },
