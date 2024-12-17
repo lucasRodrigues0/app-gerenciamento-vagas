@@ -1,33 +1,63 @@
 export const navbarOptions: option[] = [
     {
+        name: 'Home',
+        linkTo: "#",
+        role: [],
+        auth: false
+    },
+    {
         name: 'About',
         linkTo: "#",
-        role: []
+        role: [],
+        auth: false
     },
     {
         name: 'Register',
         linkTo: "#",
-        role: []
+        role: [],
+        auth: false
     },
     {
         name: 'Login',
         linkTo: "#",
-        role: []
+        role: [],
+        auth: false
     },
     {
-        name: 'test1',
+        name: 'Profile',
         linkTo: "#",
-        role: ['admin']
+        role: ['recruiter', 'candidate'],
+        auth: true
     },
     {
-        name: 'test2',
+        name: 'See jobs',
         linkTo: "#",
-        role: ['admin', 'candidate']
+        role: ['candidate'],
+        auth: true
     },
+    {
+        name: 'Create Job',
+        linkTo: "#",
+        role: ['admin', 'recruiter'],
+        auth: true
+    },
+    {
+        name: 'See all users',
+        linkTo: "#",
+        role: ['admin'],
+        auth: true
+    },
+    {
+        name: 'Logout',
+        linkTo: "#",
+        role: ['admin', 'candidate', 'recruiter'],
+        auth: true
+    }
 ]
 
 type option = {
     name: string,
     linkTo: string,
-    role: string[] | never
+    role: string[] | never,
+    auth: boolean
 }

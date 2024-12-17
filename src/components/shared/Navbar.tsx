@@ -2,7 +2,7 @@ import { navbarOptions } from "../../utils/navbarOptions"
 
 export const Navbar = () => {
 
-    const role: string | null = 'admin';
+    const role: string | null = 'candidate';
 
     return (
         <div className="w-full bg-slate-500 shadow-lg flex flex-row min-h-16 items-center justify-center">
