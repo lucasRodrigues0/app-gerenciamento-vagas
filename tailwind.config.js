@@ -10,7 +10,7 @@ export default {
         sans: ['Roboto', 'sans-serif']
       },
       backgroundImage: {
-        'hero': "url(./src/assets/hero-background.jpg)"
+        'hero': "url(./src/assets/img/hero-background.jpg)"
       }
     },
   },
