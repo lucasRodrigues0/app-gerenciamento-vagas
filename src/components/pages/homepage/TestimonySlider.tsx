@@ -14,7 +14,7 @@ export const TestimonySlider = () => {
     };
 
     return (
-        <div className="bg-slate-600 container border-2 border-blue-500 w-3/4 flex flex-col h-[400px] justify-around">
+        <div className="bg-slate-600 container border-2 border-blue-500 w-[65%] h-[400px] my-auto flex flex-col justify-around">
             <Slider {...settings} >
                 {
                     ratings.map((rating, index) => {
