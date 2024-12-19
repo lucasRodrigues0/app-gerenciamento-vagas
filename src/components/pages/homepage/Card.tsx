@@ -11,7 +11,7 @@ export const Card = ({ rating }: props) => {
                 <FaStar className="text-yellow-500" />
                 <FaStar className="text-yellow-500" />
             </span>
-            <p className="text-white text-md text-center mt-10">{rating.comment}</p>
+            <p className="text-white text-md text-center mt-10 px-5">{rating.comment}</p>
         </div>
     )
 }
