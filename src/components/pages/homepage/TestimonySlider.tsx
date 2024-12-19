@@ -1,39 +1,33 @@
 import Slider from "react-slick";
 import { Card } from "./Card";
-import { FaStar } from "react-icons/fa";
 import { ratings } from "../../../utils/ratings";
 
 export const TestimonySlider = () => {
+
+    const responsiveShow = () => {
+        const width = window.innerWidth;
+        if(width >= 1036) return 3;
+        if(width >= 730) return 2;
+        return 1;
+    }
 
     const settings = {
         dots: false,
         infinite: true,
         speed: 500,
-        slidesToShow: 3,
+        slidesToShow: responsiveShow(),
         slidesToScroll: 1,
     };
 
     return (
-        <div className="bg-slate-600 container border-2 border-blue-500 w-[65%] h-[400px] my-auto flex flex-col justify-around">
-            <Slider {...settings} >
-                {
-                    ratings.map((rating, index) => {
-                        return (
-                            <Card key={`k-rating${index}`}>
-                                <img src={rating.img} alt="User Image" className="w-20 h-20 -mt-10 mb-4" />
-                                <span className="flex flex-row justify-center">
-                                    <FaStar className="text-yellow-500" />
-                                    <FaStar className="text-yellow-500" />
-                                    <FaStar className="text-yellow-500" />
-                                    <FaStar className="text-yellow-500" />
-                                    <FaStar className="text-yellow-500" />
-                                </span>
-                                <p className="text-white text-md text-center mt-10">{rating.comment}</p>
-                            </Card>
-                        )
-                    })
-                }
-            </Slider>
-        </div>
+        <Slider {...settings} >
+            {
+                ratings.map((rating, index) => {
+                    return (
+                        <Card rating={rating} key={index}/>
+                    )
+                })
+            }
+        </Slider>
     )
 }
