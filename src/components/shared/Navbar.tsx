@@ -1,8 +1,11 @@
+import { NavLink,  } from "react-router-dom";
 import { navbarOptions } from "../../utils/navbarOptions"
 
 export const Navbar = () => {
 
     const role: string | null = null;
+
+    const activeStyle = ({ isActive }: any) => isActive ? 'text-violet-300 hover:text-white text-md font-thin cursor-pointer transition-all mx-1.5' : 'text-white hover:text-violet-300 text-md font-thin cursor-pointer transition-all mx-1.5';
 
     return (
         <div className="bg-slate-500 shadow-lg flex flex-row w-full min-h-16 items-center justify-center">
@@ -15,8 +18,10 @@ export const Navbar = () => {
                             )
                             .map(
                                 option =>
-                                    <div key={`k-${option.name}`} className="text-white text-md font-thin cursor-pointer hover:text-violet-300 transition-all mx-1.5">
-                                        {option.name}
+                                    <div key={`k-${option.name}`} >
+                                        <NavLink to={option.linkTo} className={activeStyle}>
+                                            {option.name}
+                                        </NavLink>
                                     </div>
                             )
                     }

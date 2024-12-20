@@ -1,25 +1,25 @@
 export const navbarOptions: option[] = [
     {
         name: 'Home',
-        linkTo: "#",
+        linkTo: "/",
         role: [],
         auth: false
     },
     {
         name: 'About',
-        linkTo: "#",
+        linkTo: "/about",
         role: [],
         auth: false
     },
     {
-        name: 'Register',
-        linkTo: "#",
+        name: 'Sign up',
+        linkTo: "/register",
         role: [],
         auth: false
     },
     {
         name: 'Login',
-        linkTo: "#",
+        linkTo: "/login",
         role: [],
         auth: false
     },
