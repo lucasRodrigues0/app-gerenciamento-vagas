@@ -1,6 +1,7 @@
 import Slider from "react-slick";
 import { Card } from "./Card";
 import { ratings } from "../../../utils/ratings";
+import { RiDraggable } from "react-icons/ri";
 
 export const TestimonySlider = () => {
 
@@ -17,6 +18,7 @@ export const TestimonySlider = () => {
         speed: 500,
         slidesToShow: responsiveShow(),
         slidesToScroll: 1,
+        draggable: false
     };
 
     return (
