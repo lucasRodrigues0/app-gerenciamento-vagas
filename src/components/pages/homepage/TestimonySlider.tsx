@@ -1,7 +1,6 @@
 import Slider from "react-slick";
 import { Card } from "./Card";
 import { ratings } from "../../../utils/ratings";
-import { RiDraggable } from "react-icons/ri";
 
 export const TestimonySlider = () => {
 
