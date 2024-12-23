@@ -13,7 +13,7 @@ export const navbarOptions: option[] = [
     },
     {
         name: 'Sign up',
-        linkTo: "/register",
+        linkTo: "/signup",
         role: [],
         auth: false
     },
