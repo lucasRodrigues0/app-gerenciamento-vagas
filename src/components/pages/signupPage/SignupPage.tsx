@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { Button } from "../../shared/Button";
 import { Form } from "../../shared/Form";
 
@@ -17,9 +18,10 @@ export const SignupPage = () => {
                     <option value="candidate" >Candidate</option>
                     <option value="recruiter">Recruiter</option>
                 </select>
-                <Button>
+                <Button style="w-full">
                     Sign-up
                 </Button>
+                <Link to={'/login'} className="hover:text-violet-400 transition-all text-sm">Already have an account ? sign-in</Link>
             </Form>
         </div>
     )

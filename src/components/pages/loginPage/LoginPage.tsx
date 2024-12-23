@@ -9,7 +9,7 @@ export const LoginPage = () => {
                 <input type="email" id="email" className="w-[300px] h-[35px] rounded-md text-black px-2 focus:outline-none focus:border-2 focus:border-violet-500" />
                 <label htmlFor="password" className="w-full">Password</label>
                 <input type="password" id="password-conf" className="w-[300px] h-[35px] rounded-md text-black px-2 focus:outline-none focus:border-2 focus:border-violet-500" />
-                <Button>
+                <Button style="w-full">
                     Login
                 </Button>
             </Form>
