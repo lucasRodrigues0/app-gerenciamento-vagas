@@ -3,7 +3,7 @@ import { Form } from "../../shared/Form";
 
 export const SignupPage = () => {
     return (
-        <div className="w-full h-screen border-2 border-red-500 flex justify-center items-center text-white">
+        <div className="w-full h-screen flex justify-center items-center text-white">
             <Form>
                 <label htmlFor="name" className="w-full">Name</label>
                 <input type="text" id="name" className="w-[300px] h-[35px] rounded-md text-black px-2 focus:outline-none focus:border-2 focus:border-violet-500"/>
