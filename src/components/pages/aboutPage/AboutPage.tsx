@@ -5,7 +5,7 @@ import { DiNodejsSmall } from "react-icons/di";
 export const AboutPage = () => {
     return (
         <section className="text-white flex justify-center my-10">
-            <div className="container flex flex-col items-center gap-10">
+            <div className="container flex flex-col items-left gap-10">
                 <h1 className="text-5xl">About this project</h1>
                 <p className="text-left">This project was made by Lucas Rodrigues. The front-end was made using React with Typescript and Tailwind CSS. The back-end was made using Node.js with Express, PostgreSQL with Typeorm in the database and Json Web Token for authentication.
                 </p>
