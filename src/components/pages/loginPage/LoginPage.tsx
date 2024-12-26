@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Button } from "../../shared/Button"
 import { Form } from "../../shared/Form"
+import { login } from "../../../service/authService";
 
 export const LoginPage = () => {
 
@@ -14,7 +15,8 @@ export const LoginPage = () => {
 
     const submit = (e: any) => {
         e.preventDefault();
-        console.log(info);
+        const resp = login(info);
+        console.log(resp);
     }
 
     return (
