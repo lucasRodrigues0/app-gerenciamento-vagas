@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { Button } from "../../shared/Button";
 import { Form } from "../../shared/Form";
 import { useState } from "react";
+import { register } from "../../../service/authService";
 
 export const SignupPage = () => {
 
@@ -21,7 +22,7 @@ export const SignupPage = () => {
 
     const submit = (e: any) => {
         e.preventDefault();
-        console.log(info);
+        register(info);
     }
 
     return (
