@@ -5,6 +5,8 @@ import { NotFoundPage } from "../components/pages/notFoundPage/NotFoundPage";
 import { AboutPage } from "../components/pages/aboutPage/AboutPage";
 import { SignupPage } from "../components/pages/signupPage/SignupPage";
 import { LoginPage } from "../components/pages/loginPage/LoginPage";
+import { ProfilePage } from "../components/pages/profilePage/ProfilePage";
+import { AuthGuard } from "./guards/AuthGuard";
 
 export const router = createBrowserRouter([
     {
@@ -33,6 +35,16 @@ export const router = createBrowserRouter([
         path: '/login',
         element: (
             <LoginPage />
+        )
+    },
+    {
+        path: '/profile',
+        element: (
+            <AuthGuard>
+                <MainLayout>
+                    <ProfilePage />
+                </MainLayout>
+            </AuthGuard>
         )
     },
     {

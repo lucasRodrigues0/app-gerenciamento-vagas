@@ -36,7 +36,7 @@ export const SignupPage = () => {
                 <input type="password" id="password" className="w-[300px] h-[35px] rounded-md text-black px-2 focus:outline-none focus:border-2 focus:border-violet-500" onChange={(e) => setPassword(e.target.value)} />
                 <label htmlFor="password-conf" className="w-full">Confirm Password</label>
                 <input type="password" id="password-conf" className="w-[300px] h-[35px] rounded-md text-black px-2 focus:outline-none focus:border-2 focus:border-violet-500" onChange={(e) => setConfirm(e.target.value)} />
-                <select className="text-black w-full h-6 text-center rounded-md" onChange={(e) => { setType(e.target.value.toLowerCase())}}>
+                <select className="text-black w-full h-6 text-center rounded-md" onChange={(e) => setType(e.target.value.toLowerCase())}>
                     <option value="candidate" >Candidate</option>
                     <option value="recruiter">Recruiter</option>
                 </select>
