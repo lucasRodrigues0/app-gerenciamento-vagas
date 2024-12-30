@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Button } from "../../shared/Button";
 import { Form } from "../../shared/Form";
 import { useState } from "react";
@@ -6,6 +6,7 @@ import { register } from "../../../service/authService";
 
 export const SignupPage = () => {
 
+    const navigate = useNavigate();
     const [name, setName] = useState<string>('');
     const [email, setEmail] = useState<string>('');
     const [password, setPassword] = useState<string>('');
@@ -22,7 +23,12 @@ export const SignupPage = () => {
 
     const submit = (e: any) => {
         e.preventDefault();
-        register(info);
+        register(info)
+        .then(response => {
+            if(response.status === 201) {
+                navigate('/login');
+            }
+        });
     }
 
     return (
