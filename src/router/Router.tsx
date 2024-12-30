@@ -7,6 +7,7 @@ import { SignupPage } from "../components/pages/signupPage/SignupPage";
 import { LoginPage } from "../components/pages/loginPage/LoginPage";
 import { ProfilePage } from "../components/pages/profilePage/ProfilePage";
 import { AuthGuard } from "./guards/AuthGuard";
+import { UserLayout } from "../components/layout/UserLayout";
 
 export const router = createBrowserRouter([
     {
@@ -41,9 +42,9 @@ export const router = createBrowserRouter([
         path: '/profile',
         element: (
             <AuthGuard>
-                <MainLayout>
+                <UserLayout>
                     <ProfilePage />
-                </MainLayout>
+                </UserLayout>
             </AuthGuard>
         )
     },
