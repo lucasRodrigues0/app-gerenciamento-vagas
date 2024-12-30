@@ -2,9 +2,11 @@ import { useState } from "react";
 import { Button } from "../../shared/Button"
 import { Form } from "../../shared/Form"
 import { login } from "../../../service/authService";
+import { useNavigate } from "react-router-dom";
 
 export const LoginPage = () => {
 
+    const navigate = useNavigate();
     const [email, setEmail] = useState<string>('');
     const [password, setPassword] = useState<string>('');
 
@@ -15,8 +17,11 @@ export const LoginPage = () => {
 
     const submit = (e: any) => {
         e.preventDefault();
-        const resp = login(info);
-        console.log(resp);
+        login(info).then(response => {
+            if(response.status === 200) {
+                navigate('/profile');
+            }
+        });
     }
 
     return (
