@@ -1,26 +1,30 @@
-import { PropsWithChildren, useEffect } from "react";
-import { Navigate } from "react-router-dom";
+import { PropsWithChildren, useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { checkToken } from "../../service/authService";
 
 export const AuthGuard = ({children}: PropsWithChildren) => {
 
-    let canAccess: boolean = false;
+    const navigate = useNavigate();
+
+    const [checked, setChecked] = useState<boolean>(false);
 
     useEffect(() => {
         checkToken().then(response => { 
             if(response?.status === 204) {
-                canAccess = true;
-                console.log(canAccess);
-                //ver por que não está redirecionando
+                setChecked(true);
+            } else {
+                navigate('/login')
             }
-        });
-    }, []);
+        }).catch(() => navigate('/login'));
+    }, [navigate]);
+
+    if(!checked) {
+        return null;
+    }
 
     return (
         <>
-            {
-                canAccess ? children : <Navigate to='/login' />
-            }
+            {children}
         </>
     )
 }
