@@ -13,7 +13,7 @@ export const AuthGuard = ({children}: PropsWithChildren) => {
             if(response?.status === 204) {
                 setChecked(true);
             } else {
-                navigate('/login')
+                navigate('/login');
             }
         }).catch(() => navigate('/login'));
     }, [navigate]);
